@@ -1,0 +1,28 @@
+<loading-spinner *ngIf="isLoading"></loading-spinner>
+<div class="container">
+    <div class="row size-limited">
+        <div class="col-xs-12">
+            <h1 class="title">
+                Start here!
+            </h1>
+            
+            <form (submit)="addHobby(hobby.value)">
+            <div>
+                <label for ="hobby">URLS: </label>
+                <input type = "text" #hobby/> 
+            </div>
+            </form>
+            
+            <!-- <button (click)="onClick()">Submit</button> -->
+
+            <ul>
+                <li *ngFor="let hobby of hobbies ; let i = index">{{i + 1}}: {{hobby}} <button (click)="deleteHobby(hobby)">x</button></li>
+            </ul>
+
+            <div *ngIf = "hobby > 45 else short">
+                the user is logged in
+            </div>
+            <ng-template #short ></ng-template>
+        </div>
+    </div>
+</div>

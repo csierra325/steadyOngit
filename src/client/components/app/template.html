@@ -1,0 +1,5 @@
+<div class="offline-banner" *ngIf="!online" [@slideDown]>
+    <p class="offline-text">It looks like you are offline, so some features may not function correctly. <br class="hidden-lg"/> Please check your internet connection.</p>
+</div>
+<app-header></app-header>
+<router-outlet></router-outlet>

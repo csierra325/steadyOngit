@@ -1,0 +1,17 @@
+@import '_variables';
+
+h1 {
+    color: $main-color;
+}
+
+h2 {
+    color: $main-offset-color;
+}
+
+.not-found-container {
+    text-align: center;
+}
+ 
+.page-container {
+    height: calc(100% - #{$header-height});
+}

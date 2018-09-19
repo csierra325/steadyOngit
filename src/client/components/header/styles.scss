@@ -1,0 +1,123 @@
+@import '_variables';
+@import '_mixins';
+
+$header-item-height: $header-height - 1.5rem;
+$header-item-margin: 0.75rem;
+
+$header-button-height: $header-height - 3rem;
+$header-button-margin: 1.5rem;
+
+.header-container {
+    background: white;
+    height: $header-height;
+    position: relative; // let the box-shadow fall over stuff
+    box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.14);
+
+    .header-row {
+        .header-logo-container {
+            display: none;
+            height: $header-height;
+
+            &.persist {
+                display: block;
+            }
+
+            @media(min-width: $screen-md-min) {
+                display: block;                
+            }
+            .header-logo {
+                height: $header-item-height;
+                margin: $header-item-margin 0;
+
+                @media(min-width: $screen-sm-min) {
+                    margin: $header-item-margin 1rem;
+                }
+
+                @media(min-width: $max-content-width) {
+                    margin: $header-item-margin 0.5rem;
+                }
+            }
+        }
+        .nav-bar {
+            display: none;
+
+            &.open {
+                display: block;
+                position: absolute;
+                @include subtleShadow();
+                top: 5.8rem;
+                left: 1rem;
+                z-index: 50;
+                background-color: #ffffff;
+                border-radius: $base-border-radius;
+                border: 0.1rem solid $divider-color;
+            }
+
+            @media(min-width: $screen-md-min) {
+                display: block;
+                height: 6rem;
+                margin-left: 0;
+                
+                .nav-links {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-content: center;
+                    
+                    .nav-link {
+                        padding: 0 1rem;
+                    }
+                }
+            }
+
+            .nav-links {
+                list-style: none;
+                margin: 1rem 2rem;
+                padding: 0;
+
+                .nav-link {
+                    margin: 1rem;
+                    color: $disabled-text;
+                    cursor: pointer;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 2.6rem;
+
+                    &:hover {
+                        color: $main-offset-color
+                    }
+
+                    &.active {
+                        color: $main-color;
+                        &:hover {
+                            color: $main-offset-color
+                        }
+                    }
+
+                    .nav-icon {
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        .btn-header {
+            @include buttonShadow2();
+            width: inherit;
+            height: $header-button-height;
+            margin: $header-button-margin 0 $header-button-margin auto;
+            outline: none;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            vertical-align: middle;
+            font-weight: 600;
+            font-family: Poppins, sans-serif;
+            letter-spacing: -0.05rem;
+            text-align: center;
+            padding: 0.4rem 1.5rem;
+
+            @media(min-width: $screen-sm-min) {
+                margin: $header-button-margin 1.2rem $header-button-margin auto;
+            }
+        }
+    }
+}

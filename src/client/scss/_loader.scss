@@ -1,0 +1,62 @@
+@import '_variables';
+
+// This file is top level so that the pre-angular spinner in index.html works too!
+
+$icon-size: 10rem;
+$icon-offset: ($icon-size / 2);
+
+@keyframes throb {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dashoffset: 750;
+    }
+    100% {
+        stroke-dashoffset: 1500;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-overlay {
+    position: fixed;
+    z-index: 999 !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(85, 0, 211); // fallback
+    background-color: rgba($main-color, 0.8);
+
+    &.preload {
+        background-color: $main-color;
+    }
+
+    .spinner {
+        z-index: 999 !important;
+        width: $icon-size;
+        height: $icon-size;
+        position: fixed;
+        top: calc(50% - #{$icon-offset});
+        left: calc(50% - #{$icon-offset});
+
+        svg {
+            display: block;
+            width: $icon-size;
+            height: $icon-size;
+        }
+
+        .loading {
+            text-align: center;
+            color: #fff;
+        }
+    }
+}

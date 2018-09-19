@@ -1,0 +1,50 @@
+$root-font-size: 10px;
+
+// Colors
+$error-color: #d9534f;
+$success-color: #449d44;
+$almost-black: #000033;
+$almost-white: #f4f2f7;
+$text-dark-grey: #46434f;
+$text-grey: #9890ab;
+$text-light-grey: #a8a5b2;
+$focus-background: #ffffff;
+$divider-color: #d8d8d8;
+
+// Color Vars
+$main-color: #3fbae8;
+$main-offset-color: lighten($main-color, 20%);
+$secondary-color: #fff;
+$disabled-text: $text-light-grey;
+$bg-color: #f8f8f8;
+
+
+// Scaffolding
+$min-screen-size: 320px;
+$base-border-radius: 0.8rem;
+$btn-border-radius: 10rem;
+
+$max-content-width: 117rem;
+
+$header-height: 6rem;
+$footer-height: 32rem;
+$download-footer-height: 12rem;
+
+// GRID VARS
+$num-columns: 12;
+
+$gutter: 1rem;
+$outer-gutter: 0.5rem;
+$row-compensation: -0.5rem;
+$col-compensation: 0.5rem;
+
+/*
+* media queries use pixels because chrome doesn't 
+* let them respect html font-size for rem
+* which defeats the whole point.
+*/
+$screen-xs-min: 0;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
