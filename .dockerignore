@@ -1,0 +1,10 @@
+.dockerignore
+.env
+.git
+.gitignore
+.vs
+.vscode
+.gitkeep
+docker-compose.yml
+docker-compose.*.yml
+node_modules/
