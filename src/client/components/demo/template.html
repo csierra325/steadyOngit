@@ -5,7 +5,7 @@
             <h1 class="title">
                 Start here!
             </h1>
-            
+            <h2>Hello type url below and press enter</h2>
             <form (submit)="addUrl(link.value)">
             <div>
                 <label for ="link">URLS: </label>
@@ -20,7 +20,7 @@
             </ul>
 
             <div *ngIf = "link > 45 else short">
-                the user is logged in
+                Url is too long. Shortened Url below:
             </div>
             <ng-template #short ></ng-template>
         </div>

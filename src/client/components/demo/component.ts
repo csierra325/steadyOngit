@@ -18,10 +18,8 @@ export class DemoComponent implements OnInit {
     }
     ngOnInit(){
         console.log("ngOnInit")
-        this.links = ["hello type url and press enter"] 
-       
-         
-
+        this.links = [] 
+    
         
     }
    
