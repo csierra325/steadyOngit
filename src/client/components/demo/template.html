@@ -6,20 +6,20 @@
                 Start here!
             </h1>
             
-            <form (submit)="addHobby(hobby.value)">
+            <form (submit)="addUrl(link.value)">
             <div>
-                <label for ="hobby">URLS: </label>
-                <input type = "text" #hobby/> 
+                <label for ="link">URLS: </label>
+                <input type = "text" #link/> 
             </div>
             </form>
             
             <!-- <button (click)="onClick()">Submit</button> -->
 
             <ul>
-                <li *ngFor="let hobby of hobbies ; let i = index">{{i + 1}}: {{hobby}} <button (click)="deleteHobby(hobby)">x</button></li>
+                <li *ngFor="let link of links ; let i = index">{{i + 1}}: {{link}} <button (click)="deleteUrl(link)">x</button></li>
             </ul>
 
-            <div *ngIf = "hobby > 45 else short">
+            <div *ngIf = "link > 45 else short">
                 the user is logged in
             </div>
             <ng-template #short ></ng-template>

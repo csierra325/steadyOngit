@@ -10,7 +10,7 @@ export class DemoComponent implements OnInit {
 
     isLoading = false; 
 
-    hobbies: any[];
+    links: any[];
     shortUrl: any[];
 
     constructor(){
@@ -18,22 +18,22 @@ export class DemoComponent implements OnInit {
     }
     ngOnInit(){
         console.log("ngOnInit")
-        this.hobbies = ["hello type url and press enter"] 
+        this.links = ["hello type url and press enter"] 
        
          
 
         
     }
    
-    title = "app works!loolllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll"
+    // title = "app works!" (if else statement test)
    
    
-    addHobby(hobby){
-        console.log(hobby)
-        this.hobbies.push(hobby)
+    addUrl(link){
+        console.log(link)
+        this.links.push(link)
         let lettersInUrl = [];
         let numberInUrl = 0;
-        lettersInUrl = hobby.split("");
+        lettersInUrl = link.split("");
         numberInUrl = lettersInUrl.length;
         console.log(numberInUrl)
 
@@ -43,7 +43,7 @@ export class DemoComponent implements OnInit {
             
             
         } else{
-            // hobby.replace("'https://'" + this.makeShort() );
+            // link.replace("'https://'" + this.makeShort() );
             alert("its too long")
            console.log("'https://'" + this.makeShort() )
 
@@ -52,10 +52,10 @@ export class DemoComponent implements OnInit {
     } 
 
 
-    deleteHobby(hobby){
-        for(let i = 0; i < this.hobbies.length; i++){
-            if(this.hobbies[i] == hobby){
-                this.hobbies.splice(i, 1);
+    deleteUrl(link){
+        for(let i = 0; i < this.links.length; i++){
+            if(this.links[i] == link){
+                this.links.splice(i, 1);
             }
         }
     }
