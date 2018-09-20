@@ -48,7 +48,7 @@ export class DemoComponent implements OnInit {
         }
         return false;
     } 
-
+// need to make else if statement to replace long url with short. and have displayed
 
     deleteUrl(link){
         for(let i = 0; i < this.links.length; i++){
@@ -68,7 +68,12 @@ export class DemoComponent implements OnInit {
         return text;
         
       }
+
+    //   add an updateURL function
+
+
+    // Add link functionality to the URL shortner.
+    // Add  it to routing. 
       
-    
 
 }
